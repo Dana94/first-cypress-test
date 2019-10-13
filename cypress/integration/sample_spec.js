@@ -2,6 +2,8 @@ describe('My First Test', function() {
     it('Visits the Kitchen Sink', function() {
       cy.visit('https://example.cypress.io') // visit this url
 
+      cy.pause() // pause the test, allow to manually step into the next one
+
       cy.contains('type').click() // look if the work 'type' exists, then click on it
 
       cy.url().should('include', '/commands/actions') // check if the page you clicked to is correct, assert it includes the '/commands/actions'
